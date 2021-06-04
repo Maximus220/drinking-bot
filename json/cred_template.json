@@ -1,0 +1,9 @@
+{
+    "twitter":{
+        "c_key":"",
+        "c_secret":"",
+        "accToken":"",
+        "accToken_secret":""
+    },
+    "openWeather": ""
+}
