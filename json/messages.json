@@ -1,0 +1,43 @@
+{
+    "default":[
+        "Hi @%{user}%, me again! It's time for your water glass!! ⏳",
+        "Hey @%{user}% 👋, you didn't forget your hourly glass of water, right? Anyway I'm here to remind you to take it!",
+        "Hello @%{user}%, it's (I'm lazy to implement an hour checking function) pm? Or am idk? Which means you have yo take your usual glass of water ⏰",
+        "Hiii @%{user}%, how are you doing? (Idc I'm litteraly a bot), time for your glass of water 🥤",
+        "Hola @%{user}%, es el hora para beber a un vaso de agua!! 💧",
+        "Greetings @%{user}%! I think this is the perfect hour to drink a part of your 2.7 daily litters of water 🥤",
+        "Bonjour @%{user}%! Time to get some water!! 🍷 (it's not a glass of water but it's the only emoji I've found so shush)"
+    ],
+    "tips":[
+        {
+            "msg":"hi\n",
+            "state":"used"
+        },
+        {
+            "msg":"hi\n",
+            "state":"used"
+        }
+    ],
+    "compliments":[
+        "Have a beautiful day Jenn 🤩",
+        "Don't forget we all stan you here, and want you to be healthy 🥰",
+        "We all need our favorite genius, that's why you need to be an healthy nerd 🤓",
+        "Your future isn't just a joke doctor, the humanity needs you 💊"
+    ],
+    "weather":{
+        "hot":[
+            "Besides, it seems to be kinda hot today (%{temp}%) 😅 So what are you waiting for to drink water?!", 
+            "Have you noticed that heat?? %{temp}%!! Do you believe that?? Such a good reason to drink some water, isn't it? 🥛",
+            "During this hot time (%{temp}%), what best than a good glass of fresh water??",
+            "For lack of a fan, you can drink some fresh water during this heat wave (%{temp}%) 🥵"
+        ],
+        "casu":[
+            "Casual temperatures (%{temp}%) doesn't mean you don't have to drink!! Even if you're not thirsty :D",
+            "It's a pretty good temperature (%{temp}%), which means you don't have any excuse to walk a bit to get some water 😉"
+        ],
+        "cold":[
+            "Okay, okay, it's kinda cold today (%{temp}%), but it doesn't mean you don't have to drink water 😠",
+            "Even if today is pretty cold (%{temp}%), water stay your friend!! 🥶"
+        ]
+    }
+}
