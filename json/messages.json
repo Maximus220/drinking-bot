@@ -4,7 +4,7 @@
         "Hey @%{user}% 👋, you didn't forget your hourly glass of water, right? Anyway I'm here to remind you to take it!",
         "Hello @%{user}%, it's (I'm lazy to implement an hour checking function) pm? Or am idk? Which means you have yo take your usual glass of water ⏰",
         "Hiii @%{user}%, how are you doing? (Idc I'm litteraly a bot), time for your glass of water 🥤",
-        "Hola @%{user}%, es el hora para beber a un vaso de agua!! 💧",
+        "Hola @%{user}%, es la hora para beber a un vaso de agua!! 💧",
         "Greetings @%{user}%! I think this is the perfect hour to drink a part of your 2.7 daily litters of water 🥤",
         "Bonjour @%{user}%! Time to get some water!! 🍷 (it's not a glass of water but it's the only emoji I've found so shush)"
     ],
@@ -32,7 +32,7 @@
             "For lack of a fan, you can drink some fresh water during this heat wave (%{temp}%) 🥵"
         ],
         "casu":[
-            "Casual temperatures (%{temp}%) doesn't mean you don't have to drink!! Even if you're not thirsty :D",
+            "Casual temperatures (%{temp}%) doesn't mean you don't have to drink!! Even if you're not thirsty 😄",
             "It's a pretty good temperature (%{temp}%), which means you don't have any excuse to walk a bit to get some water 😉"
         ],
         "cold":[

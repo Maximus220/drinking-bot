@@ -2,9 +2,21 @@ const twitter = require('./utils/twitter');
 const openWeather = require('./utils/openWeather');
 const fs = require('fs');
 
+//Json loads
 const msgPath = './json/messages.json';
 const msg = JSON.parse(fs.readFileSync(msgPath, 'utf8'));
+const userPath = './json/jenni.json';
+const user = JSON.parse(fs.readFileSync(userPath, 'utf8'));
 
+//Prototypes & useful functions load
+String.prototype.countChar = function(){
+    return this.split('').length;
+}
+function random(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+//Main loop
 setInterval(
     async function(){
         await drink();
@@ -12,13 +24,22 @@ setInterval(
 );
 
 async function drink(){
-    let message = await chooseMessage();
-    twitter.tweet(message);
+    let hour = new Date().getUTCHours()+user.utc;
+    console.log(hour);
+    if(hour>=10&&hour<=22){
+        let message=new String();
+        while(message.countChar()>280||message.countChar()<10){
+            message = await chooseMessage();
+        }
+        console.log(message);
+        twitter.tweet(message);
+    }
 }
 drink(); //OnLaunch
 
+//Generate a full message
 async function chooseMessage(){
-    let temp = await openWeather.weather('4180439');
+    let temp = await openWeather.weather(user.city_id);
     let temperature = JSON.parse(temp).main.temp;
     let weather;
     if(temperature > 75){
@@ -29,7 +50,7 @@ async function chooseMessage(){
         weather = msg.weather.casu[random(0, msg.weather.casu.length-1)].replace('%{temp}%', temperature+'°F');
     }
 
-    let twinnn = await twitter.userLookup('1299562129163464704'); //1299562129163464704 jenn //1349030724612083714 maxi
+    let twinnn = await twitter.userLookup(user.id);
     let welcome = msg.default[random(0, msg.default.length-1)].replace('%{user}%', twinnn.data[0].screen_name);
 
     let compliment = msg.compliments[random(0, msg.compliments.length-1)];
@@ -46,8 +67,4 @@ async function chooseMessage(){
     if(tip==null) tip = '';
 
     return welcome + '\n\n' + tip + weather + " " + compliment;
-}
-
-function random(min, max) { // min and max included 
-    return Math.floor(Math.random() * (max - min + 1) + min)
 }
