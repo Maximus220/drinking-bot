@@ -1,2 +1,11 @@
 json/cred.json
+json/cred_activity.json
+json/messages.json
+json/temp-users
+
+json/users/cloud.json
+json/users/jenni.json
+json/users/miya.json
+json/users/ruby.json
+
 node_modules

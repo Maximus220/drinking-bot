@@ -1,0 +1,31 @@
+{
+    "_note":"The options 'city_id', 'temperature' and 'weather' are optionnal",
+    "id":"ID of the user",
+    "utc":"Difference to GMT time (ex : -2)",
+    "hours_limit":"Limit hours to send messages (use 24Hour system) (ex : [10,22] to send tweets only between 10am and 10pm)",
+    "city_id":"Enter the city ID (as a String) (you can find city ID from : http://bulk.openweathermap.org/sample/)",
+    "temperature":{
+        "unit":"Choose between: imperial (°F), metric (°C) or standard (°K)",
+        "cold":"Integer limit for cold temperature, any temperature under it will be considered cold",
+        "hot":"Integer limit for hot temperature, any temperature above it will be considered hot"
+    },
+    "msg": {
+        "default":[
+            "Default text at the start of the tweet"
+        ],
+        "compliments":[
+            "Additional text designed to be a compliment"
+        ],
+        "weather":{
+            "hot":[
+                "Text added if temperature is considered 'hot'"
+            ],
+            "casu":[
+                "Text added if temperature is considered 'case'"
+            ],
+            "cold":[
+                "Text added if temperature is considered 'cold'"
+            ]
+        }
+    }
+}
